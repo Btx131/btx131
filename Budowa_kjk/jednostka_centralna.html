@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+	<head>
+		<META NAME="Author" CONTENT="Bartosz Kucyniak">
+		<meta charset="utf-8">
+		<title>Pierwsza strona</title>
+		<meta name="description" content="OTO moja 1 lekcaja">
+		<meta name="keywords" content="szkoła, lekcje, temat, nauka, 2f">
+	</head>
+	<body>
+	<h1>Jednostka centralna</h1>
+	<hr>
+	<a href="#plyta_glowna">plyta glowna</a>| <a href="#procesor"> procesor</a> | <a href="#pamiec_wewnecznaa"> pamiec wewnętrzna</a><a href="#pamiec_zewnetrzna">
+	<br>
+	<a href="#karty_rozszerzen"> karty rozszerzen</a>| <a href="#obudowa"> obudowa</a>
+	<hr>
+	<h2 id=plyta_glowna">płyta główna</h2>
+	
+	<ul>Podstawowe parametry płyty głównej:
+	<li>rodzaj zamontowanego Chipsetu: </li>
+	<li>dla procesorów firmy Intel; </li>
+	<li>dla procesorów AMD; </li>
+	<li>rodzaj zamontowanego układu Bios (Award, Ami, Phoenix); </li>
+	<li>częstotliwość zegara magistrali systemowej (zewnętrzna) (FSB); </li>
+	<li>pamięć Cache - obecnie montowana wewnątrz procesora; </li>
+	<li>rodzaj gniazda dla poszczególnych procesorów (Slot / Socket); </li>
+	<li>ilość gniazd modułów pamięci RAM oraz maksymalna ilość pamięci możliwej do zainstalowania w systemie; </li>
+	<li>ilość wolnych gniazd dla kart rozszerzających (ISA, PCI, Dual PCI, AGP, PCI Express x1, PCI Express x16); </li>
+	<li>max. częstotliwość taktowania procesora; </li>
+	<li>złącza IDE, Serial ATA; </li>
+	<li>porty i złącza: COM, LPT, USB 1.1, USB 2.0, IEEE 1394 (inaczej Firewire, iLink), SCSI. </li>
+	</ul>
+	<p>Tab.1. Gniazda umieszczone z tyłu komputera:</p>
+	<table border=3>
+	<tr>
+	<td>PS/2</td>
+	<td>Gniazdo klawiatury i myszy.</td>
+	</tr>
+	<tr>
+	<td>COM 1,<br> COM 2</td>
+	<td>Złącza szeregowe.</td>
+	</tr>
+	<tr>
+	<td>LPT 1</td>
+	<td>Złącze równoległe.</td>
+	</tr>
+	<tr>
+	<td>USB</td>
+	<td>Uniwersalna szyna danych - możliwe podłączenie każdego urządzenia wyposażonego w to złącze.</td>
+	</tr>
+	</table>
+	<img src="gniazda.gif">
+	<p>Rys.1. Rozmieszczenie gniazd wej/wyj z tyłu komputera.</p>
+	<hr>
+	<h2 id="procesor">Procesor</h2>
+
+	<ul>Rodzaje procesorów
+	<li>•	Intel: Pentium III, Pentium IV, Celeron, Celeron II, </li>
+	<li>•	AMD: Atlon, Duron, Athlon XP +, Athlon 64; </li></ul>
+	
+	<ul>Podstawowe parametry procesorów:
+	<li>zewnętrzna częstotliwość taktowania procesora (FSB), </li>
+	<li>wewnętrzna częstotliwość taktowania procesora (zazwyczaj jest to pomnożona zewnętrzna częstotliwość pracy, np. Pentium III 667 - cz. zewn. to 133 MHz, wewnętrzna 667 MHz = 5 * 133 MHZ) - częstotliwość, z jaką pracuje jądro procesora, </li>
+	<li>ilość pamięci Cache L1 i L2, </li>
+	<li>zestaw dostępnych rozkazów (oprócz standardowych dodatkowo MMX, SSE, 3D-NOW), </li>
+	<li>rodzaj zastosowanej obudowy i wyprowadzeń. </li>
+	</ul>
+	
+	<hr>
+	
+	<h2 id="pamiec_wewnetrzna">Pamięć wewnętrzna</h2>
+	<p>RAM - pamięć operacyjna (robocza) komputera.</p>
+	
+	<ul>Rodzaje najczęściej stosowanej pamięci RAM:
+	<li>SRAM - statyczna pamięć RAM (nie wymaga odświeżania); pamięć bardzo szybka, ale również bardzo kosztowna; stosowana na pamięć Cache; </li>
+	<li>DRAM - dynamiczna pamięć RAM (co pewien czas trzeba w niej odświeżać informacje) - moduły FPM i SIMM; </li>
+	<li>SDRAM - pamięć DRAM wyposażona w interfejs synchroniczny; dzięki temu wewnętrzne sygnały taktujące generowane są na podstawie zegara systemowego (moduły DIMM); </li>
+	<li>DDR SDRAM - (Double Data Rate SDRAM) - sygnał przesyłany jest na obydwu zboczach sygnału zegarowego, co podwaja prędkość działania tych pamięci; </li>
+	<li>RDRAM (Rambus Direct RAM) - bardzo szybka pamięć RAM. </li>
+	</ul>
+	
+	<p>ROM – Pamięć stała, tylko do odczytywania.</p>
+	<p>Informacja jest przechowywana stale nie ulega zniszczeniu ani zmianie. Pojemność tej pamięci jest zazwyczaj ograniczona. Przechowuje się w niej informacje o systemie operacyjnym niezbędne do podjęcia pracy po wyłączeniu zasilania. Pamięć ROM nie może być modyfikowana, można z niej tylko odczytywać dane. Z tego też względu służą do przechowywania kluczowych informacji jak np. konfiguracja BIOS'u czy modemu. </p>
+	
+	<hr>
+	
+	<h2 id="pamiec_zewnetrzna">Pamięć zewnętrzna (pamięć masowa)</h2>
+	
+	<p>Służy do przechowywania dużych ilości danych;</p>
+	
+	<ul>Przykłady:
+	<li>stacje dyskietek (FDD - Flopy Disc Drive) - służy do zapisu i odczytu dysków elastycznych o odpowiedniej pojemności (360 kB; 720 kB; 1,2 MB; 1,44 MB); </li>
+	<li>dyski twarde (HDD - Hard Disc Drive) - urządzenie służące do zapisu i odczytu gromadzonych informacji; pojemność mierzy się odpowiednio w MG i GB; dyski twarde są podstawowym nośnikiem danych w komputerze; umieszczone są zwykle na stałe w obudowie komputera; składają się z kilku lub kilkunastu płaskich, okrągłych dysków, których powierzchnie służą do przechowywania informacji.</li>
+	<li>napęd CD-ROM - napęd służący tylko do odczytu dysków CD, CD-R, CD-RW, CD-Audio itd.; pojemność standardowej płyty CD wynosi 650 MB (dziś 700 MB); </li>
+	<li>napęd DVD-ROM - napęd służący tylko do odczytu dysków DVD-ROM, możliwe jest na nim również odtwarzanie płyt CD.</li>
+	</ul>
+	
+	<hr>
+	
+	<h2id="karty_rozszerzen">Karty rozszerzeń</h2>
+	<p>Karty umożliwiające rozszerzenie podstawowych funkcji komputera o kolejne, wzbogacające jego działanie.</p>
+	
+	<ul>Przykłady:
+	<li>karta grafiki - karta rozszerzeń, umiejscawiana na płycie głównej poprzez gniazdo AGP (coraz rzadziej PCI, wyłącznie w bardzo starych modelach ISA); odpowiada w komputerze za obraz wyświetlany przez monitor; karty graficzne różnią się między sobą szybkością pracy, wielkością pamięci RAM, wyświetlaną rozdzielczością obrazu, liczbą dostępnych kolorów oraz częstotliwością odświeżania obrazu; karta graficzna składa się z czterech podstawowych elementów: płytki drukowanej, głównego procesora, pamięci wideo i układu RAMDAC (który często jest zintegrowany z procesorem w jednej obudowie); </li>
+	<li>karta dźwiękowa - umożliwia odważanie dźwięków przez komputer; </li>
+	<li>modem - pozwala na dołączenie komputera z siecią Internet poprzez stacjonarną linię telefoniczną; </li>
+	<li>karta sieciowa - umożliwia połączenie komputera z innym komputerem lub z siecią komputerową.</li>
+	</ul>
+	
+	<hr>
+	
+	<h2 id="obudowa">Obudowa komputera</h2>
+	<p>Jest jak gdyby skóra komputera. W jej wnętrzu umieszczana jest jednostka centralna wraz z kartami rozszerzeń. Rodzaj obudowy może zadecydować o rodzaju płyty głównej umieszczonej wewnątrz niej, a co za tym idzie również o innych parametrach komputera (rodzaj procesora, ilość pamięci czy kart rozszerzeń). Rozmieszczenie elementów na płycie głównej jest standaryzowane (np. ATX).</p>
+	<img src="obudowy.gif">
+	
+	
+	
+	</body>
+</html>
