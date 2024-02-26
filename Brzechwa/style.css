@@ -1,0 +1,57 @@
+body {
+margin:10%;
+font-family: arial;
+background-color: #424242;
+}
+h1 {
+color: #789515;
+
+}
+img {
+float: right;
+padding: 2%;
+}
+p {
+font-size:10pt;
+color: #ff42f8;
+text-align:: justify;
+}
+span {
+font-weight: bold;
+color: rgb(106, 226, 212);
+}
+
+p.normalny {
+font-size:14pt;
+color: #000;
+text-align:justify;
+}
+
+p.przypisy {
+font-size:20pt;
+color:red;
+text-align:justify;
+}
+
+p.uwagi {
+font-size:16pt;
+color:blue;
+text-align:justify;
+}
+
+.wazne
+{	
+color:yellow
+}
+a:active{color:blue}
+a:link{color:black}
+a:visited{color:green}
+a:hover{color:purple}
+
+#ala
+{
+font-size:15pt;
+color:purple;
+text-align:justify;	
+	
+}
