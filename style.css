@@ -13,7 +13,7 @@ filter: drop-shadow(10px 3px 3px #f08000);
 }
 h2{
 color:#228af0;
-	
+font-size:20pt;	
 }
 ul{
 font-size:15pt;	
@@ -25,4 +25,13 @@ a{
 color:	#FF00FF;	
 	
 }
-
+div{
+	
+background-color:rgb(83, 219, 0);
+filter: drop-shadow(10px 3px 3px #539300);
+font-family: monospace;
+width:900pt;
+text-align: center;
+margin-left:auto;
+margin-right:auto;
+}
