@@ -48,12 +48,13 @@ li{
 color:#B56CC0;	
 font-family: 'Trebuchet MS';	
 }
-h3{
+h1{
 color: #bbf152;
 font-weight: bold;	
 filter: drop-shadow(30px 10px 4px #5D6C9E);
  vertical-align: top;
  font-family: arial;
+ font-size:27pt;
 }
 
 
