@@ -12,7 +12,6 @@ border:1px solid black;
 }
 #left
 {
-height:100px;
 width: 75px;
 float: left;
 
@@ -23,14 +22,12 @@ background: #ABC;
 {
 float: left;
 
-height:100px;
 width: 425px;	
 background: #a2ff52;
 
 }
 #right
 {
-height:100px;
 width: 200px;
 float: left;
 
