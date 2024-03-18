@@ -35,7 +35,6 @@ background: #999;
 p{
 margin-left: auto;
 text-algin: center;
-color:#465DA9
 }
 ul{
 font-size:15pt;	
@@ -47,7 +46,13 @@ li{
 color: #E2B019;	
 font-family: 'Trebuchet MS';	
 }
-
+h3{
+color: #bbf152;
+font-weight: bold;	
+filter: drop-shadow(30px 10px 4px #5D6C9E);
+ vertical-align: top;
+ font-family: arial;
+}
 
 
 
