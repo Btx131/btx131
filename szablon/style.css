@@ -34,10 +34,6 @@ background: #9FF;
 clear: both;
 background: #999;
 }
-p{
-margin-left: auto;
-text-algin: center;
-}
 ul{
 font-size:15pt;	
 margin:40pt;	
@@ -55,6 +51,8 @@ filter: drop-shadow(30px 10px 4px #5D6C9E);
  vertical-align: top;
  font-family: arial;
  font-size:27pt;
+ margin-left: auto;
+ text-algin: center;
 }
 
 
