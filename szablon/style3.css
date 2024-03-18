@@ -13,7 +13,7 @@ border:1px solid black;
 #left
 {
 height:100px;
-width: 100px;
+width: 75px;
 float: left;
 
 background: #ABC;
@@ -24,7 +24,7 @@ background: #ABC;
 float: left;
 
 height:100px;
-width: 400px;	
+width: 425px;	
 background: #a2ff52;
 
 }
