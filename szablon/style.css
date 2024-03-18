@@ -38,7 +38,7 @@ ul{
 font-size:15pt;	
 text-align:top;	
 color: #a24272;	
- font-size:38pt;
+ font-size:17pt;
 }
 li{
 color:#B56CC0;	
@@ -57,7 +57,6 @@ filter: drop-shadow(30px 10px 4px #5D6C9E);
 }
 #top
 {
-text-algin: center;
 background:#8156FF;	 
 filter: drop-shadow(30px 10px 4px #663FFF);
 margin-left:auto;
