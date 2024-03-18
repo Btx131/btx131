@@ -35,12 +35,13 @@ clear: both;
 background: #999;
 }
 ul{
-font-size:15pt;	
+font-size:20pt;	
 text-align:top;	
 color: #a24272;	
  font-size:17pt;
 }
 li{
+font-size:13pt;	
 color:#B56CC0;	
 font-family: 'Trebuchet MS';	
 }
