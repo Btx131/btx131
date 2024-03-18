@@ -20,12 +20,14 @@ background: #9CF;
 width: 170px;
 float: left;
 background: #ABC;
+ border:1px solid black;
 }
 #right
 {
 width: 580px;
 float: left;
 background: #9FF;
+ border:1px solid black;
 }
 #footer
 {
@@ -43,7 +45,7 @@ text-align:top;
 color: #a24272;	
 }
 li{
-color: #E2B019;	
+color:#B56CC0;	
 font-family: 'Trebuchet MS';	
 }
 h3{
