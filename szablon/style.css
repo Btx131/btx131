@@ -57,13 +57,12 @@ filter: drop-shadow(30px 10px 4px #5D6C9E);
 #top
 {
 text-algin: center;
-background:#8156FF;
-margin:40pt;	 
+background:#8156FF;	 
 filter: drop-shadow(30px 10px 4px #663FFF);
 margin-left:auto;
 margin-right:auto;
-width: 1000px;
- 
+width: 1200px;
+height: 500px; 
 
 
 }
