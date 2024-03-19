@@ -82,9 +82,20 @@ background: #a57f18;
 
 margin-top: 10px;
 height: 6px;
-
+}
+img{
+  width: 300px;
+  animation: rotation 6s infinite linear;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 
 
