@@ -95,46 +95,30 @@ function showMenu() {
     </article>
     <aside>
       <h3>Patrz na upływający czas</h3>
-      <script type="text/javascript">
-        var onl=window.onload||Function;
-        onload=function(){
-            var d=10;
-            var w=400;
-            var h=300;
-            var z=document.getElementById('zegar');
-            z.style.position='relative';
-            var t=[];
-            for(var i=1;i<4;i++){
-                t[i]=[];
-                for(var j=1;j<=d;j++){
-                    var el=document.createElement('span');
-                    el.style.position='absolute';
-                    el.style.fontSize='40px';
-                    el.appendChild(document.createTextNode('.'));
-                    z.appendChild(el);
-                    t[i][j]=el;
-                }
-            }
+          <script>
+        function zegarek()
+        {
+            var data = new Date();
+            var godzina = data.getHours();
+            var minuta = data.getMinutes();
+            var sekunda = data.getSeconds();
+            var dzien = data.getDate();
+            var dzienN = data.getDay();
+            var miesiac = data.getMonth();
+            var rok = data.getFullYear();
            
-            (function(){
-                var a=[];
-                with(new Date()){
-                    a[3]=getSeconds()*6;
-                    a[2]=getMinutes()*6;
-                    a[1]=getHours()*30;
-                }
-                for(var i=1; i<4; i++){
-                    for(var x=1; x<=d; x++){
-                        with(t[i][x].style){
-                            top=Math.sin((a[i]-90)*Math.PI/180)*i*x*h/d/6+h/|>2-36+'px';
-                            left=Math.cos((a[i]-90)*Math.PI/180)*i*x*w/d/6+w/|>2+'px';
-                        }
-                    }
-                }  
-                setTimeout(arguments.callee, 1000);
-            })();
-        }
-        </script>
+            if (minuta < 10) minuta = "0" + minuta;
+            if (sekunda < 10) sekunda = "0" + sekunda;
+           
+            var dni = new Array("niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota");
+            var miesiace = new Array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia");
+           
+            var pokazDate = "Dzisiaj jest " + dni[dzienN] + ', ' + dzien + ' ' + miesiace[miesiac] + ' ' + rok + " roku.<br />Godzina " + godzina + ':' + minuta + ':' + sekunda;
+            document.getElementById("zegar").innerHTML = pokazDate;
+           
+            setTimeout(zegarek, 1000);            
+        }        
+    </script>
     </aside>
     <footer>
       <p>&copy; Bartek ╦ </p>
