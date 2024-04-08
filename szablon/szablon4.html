@@ -96,7 +96,24 @@ function showMenu() {
     </article>
     <aside>
       <h3>Patrz na upływający czas</h3>
-         <a href="#" onclick="close_window();return false;">close</a>
+         <script languauge="javascript" type="text/javascript">
+function timer(){
+  now = new Date();
+  Czas = new Date("July 1, 2011");
+  ile = Czas.getTime() - now.getTime();
+  if(ile<0)return false;
+  godzin = Math.floor(ile / (1000 * 60 * 60));
+  minut = Math.floor(ile / (1000 * 60)-godzin*60);
+  sekund = Math.floor(ile / 1000 - godzin*60*60 - minut*60);
+ 
+  var time = ((godzin < 10) ? "0" + godzin : godzin)+":"+((minut < 10) ? "0" + minut : minut)+":"+((sekund < 10) ? "0" + sekund : sekund);
+  $('#js_out').html(time);
+  document.title = '['+time+']';
+  }
+var animeInt;
+clearInterval(animeInt);
+animeInt = setInterval("timer()", 1000);
+</script>
 	>
     </aside>
     <footer>
