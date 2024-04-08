@@ -7,6 +7,23 @@
   <style type="text/css">
     article, aside, figure, footer, header, hgroup, menu, nav, section { display: block; }
   </style>
+	<script language="javascript" type="text/javascript">
+	var MSIE = navigator.appName == "Microsoft Internet Explorer"?true:false;
+	var NN = navigator.appName == "Netscape"?true:false;
+	function blockMouseClick(evt)
+	{
+  	if(MSIE && (event.button == 2)){
+      	alert("Blokada prawego przycisku myszy");
+      	return false;
+  	}
+  	else if(NN && ((evt.which == 2) || (evt.which == 3))){
+      	alert("Blokada prawego przycisku myszy");
+      		return false;
+  		}
+	}
+	document.onmousedown=blockMouseClick;
+	</script>
+
 </head>
 <body>
   <div id="container">        
