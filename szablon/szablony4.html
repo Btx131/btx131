@@ -1,95 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="utf-8">
-  <title>HTML 5 - Test 1</title>
-  <link rel="stylesheet" type="text/css" href="testh.css">
-  <style type="text/css">
-    article, aside, figure, footer, header, hgroup, menu, nav, section { display: block; }
-  </style>
+	<head>
+		<meta charset="utf-8">
+		<title>Praca na divach</title>
+		<meta name="description" content="Praca na divach">
+		<meta name="keywords" content="szkola, lekcje, temat, nauka,">
+		<link rel="stylesheet" type="text/css" href="style_kolumna.css">
 </head>
 <body>
-  <div id="container">        
-    <header>
-      <h1>HTML 5 - Test 1</h1>
-    </header>
-    
-	<script>
-	let clicked = 0;
-
-function showMenu() {
-
-	const showMenu = document.getElementById('show-menu');
-	const menu = document.getElementById('menu');
-	
-	if(clicked === 0) {
-	
-		showMenu.className='show-menu clicked';
-		
-		menu.style.left = 0;
-		
-		clicked = 1;
-		
-	}
-	
-	else {
-	
-		showMenu.className='show-menu';
-		
-		menu.style.left = '-242px';
-		
-		clicked = 0;
-		
-	}
-	
-}</script>
-      <div id="menu" class="menu">
-	<button type="button" id="show-menu" class="show-menu" onclick="showMenu();">
-		<i class="menu-bar menu-bar-1"></i>
-		<i class="menu-bar menu-bar-2"></i>
-		<i class="menu-bar menu-bar-3"></i>
-	</button>
-	<div>
-		<h3>Menu</h3>
-		<ul>
-			<li><a href="#">Menu item 1</a></li>
-			<li><a href="#">Menu item 2</a></li>
-			<li><a href="#">Menu item 3</a></li>
-			<li><a href="#">Menu item 4</a></li>
-			<li><a href="#">Menu item 5</a></li>
-		</ul>
+	<div id="container">
+	<div id="header">
+	<h1>To jest h1</h1>
+	<h2>To jest h2 </h2>
 	</div>
+	<div id="left">Menu</div>
+	<div id="main"><h3>To jest h3</h3>
 	
-	<!-- Tu wstawiasz zawartość, którą chcesz mieć w wysuwanym panelu. -->
-</div>
-    
-    <article>
-      <section>
-        <h2>Strona o prostej strukturze</h2>
-        <section>
-          <h3>Typowe elementy</h3>
-          <p>W tym miejscu zastosowano typowe elementy języka <b>HTML 5</b> (<b>&lt;article&gt;</b>, 
-             <b>&lt;section&gt;</b>) przeznaczone głównie do tworzenia struktury zawartości tekstowej 
-             dokumentu.</p>
-        </section>
-        <section>
-          <h3>Wygląd</h3>  
-          <p>Praktycznie wszystkie elementy tej strony występują w "czystej" postaci, to znaczy jako 
-             znaczniki bez żadnych atrybutów. Wyjątek stanowią elementy, dla których atrybuty są niezbędne, 
-             np. <b>&lt;a&gt;</b>.</p>
-          <p>Style określono tylko dla głównych bloków dokumentu, aby ustalić przede wszystkim ich 
-             położenie i rozmiary. Pozostałe elementy prezentowane są domyślnie, więc jeśli coś wydaje się 
-             "nie na swoim miejscu", to znaczy że wymaga zdefiniowania w <b>CSS</b>.</p>
-        </section>
-      </section>
-    </article>
-    <aside>
-      <h3>COŚ WIĘCEJ</h3>
-      <p>Tu mogą być inne informacje, np. związane z główną treścią.</p>  
-    </aside>
-    <footer>
-      <p>&copy; 2012</p>
-    </footer>
-  </div> <!-- /container -->  
+	</div>
+	<div id="right"><h3>To jest h3</h3>
+	</div>
+	<div id="footer"><p>To jest stopka</p></div>
+	</div>
 </body>
 </html>
