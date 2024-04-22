@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<title>gg</title>
+		<meta name="description" content="muma">
+		<meta name="keywords" content="szkoła, lekcje, temat, nauka, 2f">
+		<link rel="stylesheet" type="style/css" href="style">
+	<script>
+      var v = document.getElementsByTagName('video')[0];
+      
+      v.addEventListener('timeupdate', function()
+      {
+        var p = document.getElementsByTagName('progress')[0];
+        p.value = 100*this.currentTime/this.duration;
+      });
+    </script>	
+	</head>
+	<body>
+		<video width="320" height="240" autoplay muted>
+		  <source src="zz3.mp4" type="video/mp4">
+		  <source src="movie.ogg" type="video/ogg">
+		Your browser does not support the video tag.
+		</video>
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="dog.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+	</body>
+</html>
