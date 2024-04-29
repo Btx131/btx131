@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<title>gg</title>
+		<meta name="description" content="muma">
+		<meta name="keywords" content="szkoła, lekcje, temat, nauka, 2f">
+		<link rel="stylesheet" type="style/css" href="style">
+		
+		
+		
+	</head>
+	<body>
+    <div>
+	<canvas id="gfg" 
+            width="170px" 
+            height="100px" 
+            style="border:2px solid #d3d3d3;"
+			> 
+    </canvas> 
+    <script> 
+        let g = document.getElementById("gfg"); 
+        let geeks = g.getContext("2d"); 
+        let gradient = geeks.createLinearGradient(1, 4, g.width, 2); 
+        gradient.addColorStop("0", "green"); 
+        gradient.addColorStop("0.4", "yellow"); 
+        gradient.addColorStop("1.0", "aqua"); 
+        geeks.font = "40px sans-serif"; 
+        geeks.fillStyle = "red"; 
+        geeks.strokeStyle = gradient; 
+        geeks.strokeText("BTX131", 10, 60); 
+    </script>
+	</div> 	
+	<br>
+		 <canvas id="canvas" width="350" height="350"></canvas>
+			<script type="application/javascript">
+			  function draw() {
+				const canvas = document.getElementById("canvas");
+				if (canvas.getContext) {
+				  const ctx = canvas.getContext("2d");
+
+				  ctx.fillStyle = "rgb(200 0 0)";
+				  ctx.fillRect(10, 10, 150, 150);
+
+				  ctx.fillStyle = "rgb(0 0 200 / 50%)";
+				  ctx.fillRect(75, 50, 150, 150);
+				}
+			  }
+			  draw();
+			</script>
+			<br>
+			<canvas id="test-canvas" width="219" height="208" style="border:2px solid black;"></canvas>
+			<script>
+			var canvas = document.getElementById("test-canvas");
+			var context = canvas.getContext('2d');
+
+			context.fillStyle = "orange";
+			context.beginPath();
+			context.moveTo(108, 0.0);
+			context.lineTo(141, 70);
+			context.lineTo(218, 78.3);
+			context.lineTo(162, 131);
+			context.lineTo(175, 205);
+			context.lineTo(108, 170);
+			context.lineTo(41.2, 205);
+			context.lineTo(55, 131);
+			context.lineTo(1, 78);
+			context.lineTo(75, 68);
+			context.lineTo(108, 0);
+			context.closePath();
+			context.fill();
+			</script>
+			
+			
+			
+			
+	</body>
+</html>
