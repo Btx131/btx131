@@ -30,18 +30,9 @@ header h1 {
 	 color:#9101f7;
 }
 
-nav {
-     width: 10%;
-     background-color: #0E1B20;
-     padding: 10px;
-     margin: 10px;
-     float: left;
-     border: 1px solid black;
-}
-
 article {
 	height:900px;
-     width: 70%;
+     width: 60%;
      margin: 10px;
      padding: 10px;
      float: left;
@@ -50,7 +41,7 @@ article {
 }
 
 aside {
-     width: 30%;
+     width: 20%;
      background-color: #0E1220;
      padding: 10px;
      margin: 10px;
