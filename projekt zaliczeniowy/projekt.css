@@ -41,7 +41,7 @@ nav {
 
 article {
 	height:900px;
-     width: 85%;
+     width: 70%;
      margin: 10px;
      padding: 10px;
      float: left;
@@ -50,7 +50,7 @@ article {
 }
 
 aside {
-     width: 120px;
+     width: 30%;
      background-color: #0E1220;
      padding: 10px;
      margin: 10px;
