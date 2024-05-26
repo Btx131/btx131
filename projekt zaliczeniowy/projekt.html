@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>HTML 5 - Test 1</title>
+  <link rel="stylesheet" type="text/css" href="testh.css">
+  <style type="text/css">
+    article, aside, figure, footer, header, hgroup, menu, nav, section { display: block; }
+  </style>
+	
+	<script language="javascript" type="text/javascript">
+	var MSIE = navigator.appName == "Microsoft Internet Explorer"?true:false;
+	var NN = navigator.appName == "Netscape"?true:false;
+	function blockMouseClick(evt)
+	{
+  	if(MSIE && (event.button == 2)){
+      	alert("Nie można użyć prawego przycisku myszy");
+      	return false;
+  	}
+  	else if(NN && ((evt.which == 2) || (evt.which == 3))){
+      	alert("Nie można użyć prawego przycisku myszy");
+      		return false;
+  		}
+	}
+	document.onmousedown=blockMouseClick;
+	</script>
+
+</head>
+<body>
+  <div id="container">        
+    <header>
+      <h1>Temat jeszcze nie ustalony</h1>
+    </header>
+    
+	<script>
+	let clicked = 0;
+
+function showMenu() {
+
+	const showMenu = document.getElementById('show-menu');
+	const menu = document.getElementById('menu');
+	
+	if(clicked === 0) {
+	
+		showMenu.className='show-menu clicked';
+		
+		menu.style.left = 0;
+		
+		clicked = 1;
+		
+	}
+	
+	else {
+	
+		showMenu.className='show-menu';
+		
+		menu.style.left = '-242px';
+		
+		clicked = 0;
+		
+	}
+	
+}</script>
+      <div id="menu" class="menu">
+	<button type="button" id="show-menu" class="show-menu" onclick="showMenu();">
+		<i class="menu-bar menu-bar-1"></i>
+		<i class="menu-bar menu-bar-2"></i>
+		<i class="menu-bar menu-bar-3"></i>
+	</button>
+	<div>
+		<h3>Menu</h3>
+		<ul>
+			<li><a href="#">1 link</a></li>
+			<li><a href="#">2 link</a></li>
+			<li><a href="#">3 link</a></li>
+			<li><a href="#">4 link</a></li>
+			<li><a href="#">5 link</a></li>
+		</ul>
+	</div>
+	
+</div>
+    
+    <article background-image:"https://www.google.com/imgres?q=no%20way&imgurl=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FFocxxUHXoAEQcdq.jpg&imgrefurl=https%3A%2F%2Ftwitter.com%2Foperagxofficial%2Fstatus%2F1623320917836279810%3Flang%3Dpl&docid=n07i6cCuBSS5LM&tbnid=dqM827-c9N4AOM&vet=12ahUKEwigwsbwnrKFAxXmHhAIHUaNAcQQM3oECEYQAA..i&w=1074&h=957&hcb=2&ved=2ahUKEwigwsbwnrKFAxXmHhAIHUaNAcQQM3oECEYQAA">
+      <section>
+        <h2>H2</h2>
+        <section>
+          <h3>H3-1</h3>
+          <p>W tym miejscu jeszcze coś będzie.</p>
+        </section>
+        <section>
+          <h3>H3-2</h3>  
+          <p>przykładowy</p>
+          <p>tekst</p>
+        </section>
+      </section>
+    </article>
+    <aside>
+      
+    </aside>
+    <footer>
+      <p>&copy; Bartek ╦ </p>
+    </footer>
+  </div> <!-- /container -->  
+</body>
+</html>
