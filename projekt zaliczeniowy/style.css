@@ -108,3 +108,7 @@ body {
 .show {
   display: grid;
 }
+p{
+  color: #ff5400;
+  tekst-algin: center;
+}
