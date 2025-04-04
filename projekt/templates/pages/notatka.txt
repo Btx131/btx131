@@ -1,2 +1,0 @@
-zapisz w dzienniku to co robiles wczoraj
-(laczenie stron uzytkowanie kontrolera stworzenie nowego projektu na kilka dni )
