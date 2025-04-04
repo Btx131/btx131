@@ -1,0 +1,12 @@
+when@dev:
+    _errors:
+        resource: "@FrameworkBundle/Resources/config/routing/errors.xml"
+        prefix: /_error
+
+quiz_submit:
+    path: /quiz/submit
+    controller: App\Controller\QuizController::submit
+
+add_comment:
+    path: /add-comment
+    controller: App\Controller\CommentController::add
