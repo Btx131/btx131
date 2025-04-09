@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}O nas{% endblock %}
+
+{% block content %}
+<section class="about-hero animate">
+    <div class="hero-content">
+        <h1>O nas</h1>
+        <p>Jesteśmy firmą, która oferuje wyjątkowe usługi dla każdego klienta.</p>
+    </div>
+</section>
+
+<section class="about-us animate">
+    <h2>Kim jesteśmy?</h2>
+    <p>
+        Nasza firma została założona w 2010 roku przez grupę pasjonatów, którzy chcieli zmienić świat. Od tamtej pory stale się rozwijamy, aby zapewnić naszym klientom najwyższą jakość usług.
+    </p>
+</section>
+
+<section class="our-team animate">
+    <h2>Nasz zespół</h2>
+    <div class="team-list">
+        <div class="team-member">
+            <img src="{{ asset('images/team1.jpg') }}" alt="Jan Kowalski">
+            <h3>Jan Kowalski</h3>
+            <p>CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ asset('images/team2.jpg') }}" alt="Anna Nowak">
+            <h3>Anna Nowak</h3>
+            <p>Marketing Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ asset('images/team3.jpg') }}" alt="Piotr Wiśniewski">
+            <h3>Piotr Wiśniewski</h3>
+            <p>Developer</p>
+        </div>
+    </div>
+</section>
+
+<section class="our-values animate">
+    <h2>Nasze wartości</h2>
+    <div class="values-list">
+        <div class="value-item">
+            <h3>Profesjonalizm</h3>
+            <p>Dążymy do doskonałości w każdym aspekcie naszej pracy.</p>
+        </div>
+        <div class="value-item">
+            <h3>Innowacyjność</h3>
+            <p>Stale szukamy nowych rozwiązań, aby sprostać oczekiwaniom klientów.</p>
+        </div>
+        <div class="value-item">
+            <h3>Zaufanie</h3>
+            <p>Budujemy długotrwałe relacje oparte na zaufaniu.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

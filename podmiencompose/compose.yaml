@@ -1,0 +1,77 @@
+services:
+    php:
+        # Twoja istniejąca konfiguracja serwisu php...
+        image: ${IMAGES_PREFIX:-}app-php
+        restart: unless-stopped
+        environment:
+            SERVER_NAME: ${SERVER_NAME:-localhost}, php:80
+            MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
+            MERCURE_SUBSCRIBER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
+            # Run "composer require symfony/orm-pack" to install and configure Doctrine ORM
+            DATABASE_URL: postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-!ChangeMe!}@database:5432/${POSTGRES_DB:-app}?serverVersion=${POSTGRES_VERSION:-15}&charset=${POSTGRES_CHARSET:-utf8}
+            # Run "composer require symfony/mercure-bundle" to install and configure the Mercure integration
+            MERCURE_URL: ${CADDY_MERCURE_URL:-http://php/.well-known/mercure}
+            MERCURE_PUBLIC_URL: ${CADDY_MERCURE_PUBLIC_URL:-https://${SERVER_NAME:-localhost}:${HTTPS_PORT:-443}/.well-known/mercure}
+            MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
+            # The two next lines can be removed after initial installation
+            SYMFONY_VERSION: ${SYMFONY_VERSION:-}
+            STABILITY: ${STABILITY:-stable}
+        volumes:
+            - caddy_data:/data
+            - caddy_config:/config
+        ports:
+            # HTTP
+            - target: 80
+              published: ${HTTP_PORT:-80}
+              protocol: tcp
+            # HTTPS
+            - target: 443
+              published: ${HTTPS_PORT:-443}
+              protocol: tcp
+            # HTTP/3
+            - target: 443
+              published: ${HTTP3_PORT:-443}
+              protocol: udp
+    
+    # --- Dodaj lub znajdź definicję serwisu bazy danych ---
+    database: # Upewnij się, że nazwa serwisu jest poprawna (taka jak w DATABASE_URL przed @)
+        image: postgres:${POSTGRES_VERSION:-15}-alpine # Upewnij się, że obraz jest poprawny dla Twojej konfiguracji
+        environment:
+            POSTGRES_DB: ${POSTGRES_DB:-app}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
+            POSTGRES_USER: ${POSTGRES_USER:-app}
+        volumes:
+            - database_data:/var/lib/postgresql/data # Przykład wolumenu do przechowywania danych
+        # --- TO JEST KLUCZOWA ZMIANA ---
+        ports:
+            - "5432:5432" # Mapuje port 5432 kontenera na port 5432 Twojego komputera
+        # -----------------------------
+    pgadmin:
+        container_name: pgadmin_container_dupa
+        image: dpage/pgadmin4
+        environment:
+            PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+            PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+            PGADMIN_CONFIG_SERVER_MODE: 'False'
+        volumes:
+            - pgadmin:/var/lib/pgadmin
+
+        ports:
+            - "${PGADMIN_PORT:-5050}:80"
+        networks:
+            - database
+        restart: unless-stopped
+# Mercure is installed as a Caddy module, prevent the Flex recipe from installing another service
+###> symfony/mercure-bundle ###
+###< symfony/mercure-bundle ###
+
+volumes:
+    caddy_data:
+    caddy_config:
+    database_data:
+    pgadmin: # Dodaj definicję wolumenu, jeśli go używasz
+###> symfony/mercure-bundle ###
+###< symfony/mercure-bundle ###
+networks:
+  database:
+    driver: bridge

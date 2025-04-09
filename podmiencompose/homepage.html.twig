@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="container">
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      
+    </div>
+    <div class="title-section">
+      <h1>TYTUŁ</h1>
+      <p>Krotki opis co tu w ogóle jest</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Left Column: Gallery Preview -->
+    <section class="gallery-preview">
+		<h1>GALERIA</h1>
+      <div class="image-row">
+        <a href="/Galeria">
+					<img src="/img/img1.png" alt="Obrazek 1"  />
+					<img src="/img/img2.png" alt="Obrazek 2"  />
+					<img src="/img/img3.png" alt="Obrazek 3"  />
+					</a></div>
+    </section>
+
+    <!-- Right Column: Quiz -->
+    <section class="quiz-section">
+      <h2>QUIZ</h2>
+      <div id="question-container"></div>
+      <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="date-time">
+      <span id="full-date"></span>
+      <span id="current-time"></span>
+    </div>
+    <form id="opinion-form">
+      <input type="text" placeholder="Twoja opinia">
+      <button type="submit">Wyślij</button>
+    </form>
+  </footer>
+</div>
+{% endblock %}
